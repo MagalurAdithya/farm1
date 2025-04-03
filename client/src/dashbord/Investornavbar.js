@@ -29,6 +29,9 @@ function Investornavbar() {
           <li>
             <Link to="/Documents" className="nav-link">Document</Link>
           </li>
+          <li>
+            <Link to="/analytics" className="nav-link">Analytics</Link>
+          </li>
         </ul>
       </nav>
       <button className='button8' onClick={profile} >profile</button>

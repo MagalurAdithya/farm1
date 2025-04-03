@@ -21,7 +21,7 @@ import Issues from './admin/Issues';
 import Allfarm from './admin/Allfarm';
 import Document from './investor/Document';
 import About from './components/About';
-import Home from './components/Home';
+// import Home from './components/Home';
 // import Mytransaction from './farmer/Mytransaction'
 import Transactions from './admin/Transactions';
 import Verify from './admin/Verify';
@@ -31,6 +31,7 @@ import CreateProfile from './farmer/Createprofile';
 import Documentverify from './admin/Documentverify';
 import UserProfile from './investor/Profileinvestor';
 import Credit from './admin/Credit';
+import Analytics from './investor/Analytics';
 
 
 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/admin" element={<Admindashbord></Admindashbord>}></Route>
           <Route path="/issue" element={<Issue></Issue>}></Route>
           <Route path="/myinvestment" element={<Myinvestment></Myinvestment>}></Route>
+          <Route path='/analytics' element={<Analytics></Analytics>}></Route>
           <Route path='/users' element={<Manageuser></Manageuser>}></Route>
           <Route path='/All-Loans' element={<AllLoans></AllLoans>}></Route>
           <Route path='/issues' element={<Investorissue></Investorissue>}></Route>
@@ -64,8 +66,8 @@ function App() {
           <Route path ='/verify-document' element={<Documentverify></Documentverify>}></Route>
           <Route path='/All-farms' element={<Allfarm></Allfarm>}></Route>
           <Route path='/Documents' element={<Document></Document>}></Route>
-          <Route path='/about' element={<About></About>}></Route>
-          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/' element={<About></About>}></Route>
+          {/* <Route path='/' element={<Home></Home>}></Route> */}
           <Route path='/verify' element={<Verify></Verify>}></Route>
           {/* <Route path='/transaction' element={<Mytransaction></Mytransaction>}></Route> */}
           <Route path='/ALL-transactions' element={<Transactions></Transactions>}></Route>

@@ -24,7 +24,7 @@ function Login() {
       console.log("Login Response:", data);
   
       localStorage.setItem("token", data.token);
-      // localStorage.setItem("userId", data.user.id);  
+      
   
       switch (data.role) {
         case "farmer":

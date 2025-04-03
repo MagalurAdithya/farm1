@@ -27,12 +27,12 @@
   gap: 20px;
 }
 
-/* Navbar List Items */
+
 .div000 ul li {
   display: inline;
 }
 
-/* Navbar Links */
+
 .div000 ul li a {
   text-decoration: none;
   color: white;
@@ -43,7 +43,7 @@
   border-radius: 5px;
 }
 
-/* Navbar Links Hover Effect */
+
 .div000 ul li a:hover {
   background-color: #34495e;
   color: #f1c40f;

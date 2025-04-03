@@ -68,7 +68,7 @@ console.log(response)
       <div><Investerdashbord/></div>
       <div>
       <div className="upload-container">
-      <div className="upload-card">
+      <div >
         <h2 className="upload-title">Upload Document</h2>
         <form onSubmit={handleSubmit} className="upload-form">
           <input

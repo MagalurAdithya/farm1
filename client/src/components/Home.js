@@ -8,7 +8,7 @@ function Home() {
       <nav className='div000'>
         <div className="nav-brand">Farmit</div>
         <ul>
-          <li><Link to='/about'>About Us</Link></li>
+          <li><Link to='/'>About Us</Link></li>
           <li><Link to='/login'>Login</Link></li>
         </ul>
       </nav>
