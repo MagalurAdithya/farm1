@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+
+.text, .no-issue-data {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: bold;
+}
+
+
+.table1 {
+  width: 90%;
+  overflow-x: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.issues-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+
+.issues-table thead {
+  background-color: #27ae60;
+  color: white;
+}
+
+.issues-table th, .issues-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.issues-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.issues-table tbody tr:hover {
+  background-color: #d1f5d3;
+  transition: background 0.3s ease-in-out;
+}
+

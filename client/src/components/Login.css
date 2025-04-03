@@ -1,0 +1,93 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background-image: url(../../public/images/photo00.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+.container {
+    width: 350px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 1);
+    text-align: center;
+    opacity: 0.8;
+   
+}
+ .container:hover{
+  opacity: 1;
+ }
+
+  .head {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .input label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .input input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .input input:focus {
+    border-color: #007bff;
+  }
+  
+
+  .login {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login:hover {
+    background: #0056b3;
+  }
+  
+
+  .para {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .para a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .para a:hover {
+    text-decoration: underline;
+  }
+  

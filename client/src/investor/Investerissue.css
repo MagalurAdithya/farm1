@@ -1,0 +1,96 @@
+/* Styling for the form container */
+.form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .para22 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .div7 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .form-textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .button3 {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button3:hover {
+    background-color: #218838;
+  }
+  
+  .button3:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Small screen responsiveness */
+  @media screen and (max-width: 600px) {
+    .form1 {
+      padding: 20px;
+    }
+  
+    .para22 {
+      font-size: 20px;
+    }
+  
+    .form-input, .form-textarea {
+      font-size: 14px;
+    }
+  
+    .button3 {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  

@@ -1,0 +1,72 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .farms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  
+  .head2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  
+  .para9, .para3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+ 
+  .div00 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+ 
+  .all-farms2 {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .all-farms2:hover {
+    transform: translateY(-5px);
+  }
+  
+  .all-farms2 h2 {
+    font-size: 1.5rem;
+    color: #27ae60;
+    margin-bottom: 10px;
+  }
+  
+  
+  .all-farms2 p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .all-farms2 p b {
+    color: #000;
+  }
+  
+  
