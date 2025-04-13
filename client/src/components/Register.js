@@ -19,12 +19,13 @@ const Register = () => {
   const handleRole = (e) => setRole(e.target.value)
 
   const save = async () => {
-    if (!firstName || !lastName || !email || !password || !role) {
-      toast.error("Please fill out all fields")
-      return;
-    }
+    
     if (!email.includes("@gmail.com")) {
       toast.error("Please enter a valid email address");
+      return;
+    }
+    if (!firstName || !lastName || !email || !password || !role) {
+      toast.error("Please fill out all fields")
       return;
     }
    
@@ -51,7 +52,7 @@ const Register = () => {
         <h2 className="head1">Register</h2>
 
         <div className="input1">
-          <label>First Name</label>
+          <label>First Name<b style={{color:"red"}}> * </b></label>
           <input
             type="text"
             value={firstName}
@@ -61,7 +62,7 @@ const Register = () => {
         </div>
 
         <div className="input1">
-          <label>Last Name</label>
+          <label>Last Name<b style={{color:"red"}}> * </b></label>
           <input
             type="text"
             value={lastName}
@@ -71,7 +72,7 @@ const Register = () => {
         </div>
 
         <div className="input1">
-          <label>Email</label>
+          <label>Email<b style={{color:"red"}}> * </b></label>
           <input
             type="email"
             value={email}
@@ -81,7 +82,7 @@ const Register = () => {
         </div>
 
         <div className="input1">
-          <label>Password</label>
+          <label>Password<b style={{color:"red"}}> * </b></label>
           <input
             type="password"
             value={password}
@@ -89,18 +90,17 @@ const Register = () => {
             onChange={handlePassword}
           />
         </div>
-
-        <div className="input1">
-          <label>Role</label>
-          <input
-            type="text"
-            value={role}
-            placeholder="Enter your role"
-            onChange={handleRole}
-          />
+        <div className="input1" >
+        <label>Role<b style={{color:"red"}}> * </b></label>
+        <select value={role} onChange={handleRole} style={{padding:"10px"}} >
+        <option value="" disabled>
+          Select Role
+        </option>
+        <option value="farmer">Farmer</option>
+        <option value="investor">Investor</option>
+        <option value="admin">Admin</option>
+        </select>
         </div>
-        
-
         <button onClick={save} className="save">
           Register
         </button>

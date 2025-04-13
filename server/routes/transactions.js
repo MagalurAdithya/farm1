@@ -21,6 +21,37 @@ router.get('/my-transactions', auth, async (req, res) => {
   }
 });
 
+router.get('/transactions/:id',[auth,checkRole(["farmer"])],async(req,res) =>{
+  try {
+    console.log("Transaction ID:", req.params.id);
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({ message: "Invalid Transaction ID" });
+    }
+
+    const transaction = await Transaction.findById(req.params.id)
+      .populate("from", "firstName lastName email") 
+      .populate("to", "firstName lastName email")   
+      .populate({
+        path: "loan",
+        select: "amount interestRate duration status amountPaid repaymentSchedule"
+      })
+      .populate("farmId", "name location");
+
+    if (!transaction) {
+      return res.status(404).json({ message: "Transaction not found" });
+    }
+
+    const transactionData = transaction.toObject();
+    transactionData.updatedAt = transaction.updatedAt || "Not Updated";
+
+    res.json(transactionData);
+  } catch (error) {
+    console.error("Error fetching transaction details:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+
+});
+
 router.get("/analytics", auth, async (req, res) => {
   try {
 

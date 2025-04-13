@@ -14,7 +14,7 @@ const navigate= useNavigate()
         <nav className='nav2'>
             <ul>
                 <li><Link to='/users'>Users</Link></li>
-                <li><Link to='/verify'>Check</Link></li>
+                {/* <li><Link to='/verify'>Check</Link></li> */}
                 <li><Link to='/credit'>Credit</Link></li>
                 <li><Link to='/verify-document'>Document</Link></li>
                 <li><Link to='/All-Loans'>Loans</Link></li>

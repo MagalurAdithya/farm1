@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import API from "../API";
 import Investornavbar from "../dashbord/Investornavbar";
-
-
+import "./Analytics.css"; // Make sure this path is correct
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -24,15 +30,12 @@ const Analytics = () => {
       }
 
       const response = await API.get("transactions/analytics", {
-        headers: { Authorization:` Bearer ${token}` },
+        headers: { Authorization: `Bearer ${token}` },
       });
 
-      const investments = response.data.investments;
-      const repayments = response.data.repayments;
-
       setAnalytics({
-        investments,
-        repayments
+        investments: response.data.investments,
+        repayments: response.data.repayments,
       });
     } catch (error) {
       console.error("Error fetching analytics:", error);
@@ -48,8 +51,8 @@ const Analytics = () => {
 
   if (loading) {
     return (
-      <div className="loadingContainer">
-        <div animation="border" role="status" />
+      <div className="analytics-loading">
+        <div className="spinner-border" role="status" />
         <p>Loading analytics...</p>
       </div>
     );
@@ -57,26 +60,26 @@ const Analytics = () => {
 
   if (error) {
     return (
-      <div className="errorContainer">
-        <p style={{ color: "red" }}>{error}</p>
+      <div className="analytics-error">
+        <p>{error}</p>
       </div>
     );
   }
 
   const investmentData = analytics.investments.map((inv) => inv.totalAmount);
   const repaymentData = analytics.repayments.map((rep) => rep.totalAmount);
-  
+
   const months = analytics.investments.map((inv) => {
-    const monthNumber = inv._id; 
+    const monthNumber = inv._id;
     const monthNames = [
       "January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
-    return monthNames[monthNumber - 1]; 
+    return monthNames[monthNumber - 1];
   });
 
   const chartData = {
-    labels: months, 
+    labels: months,
     datasets: [
       {
         label: "Investments",
@@ -135,10 +138,10 @@ const Analytics = () => {
 
   return (
     <>
-      <Investornavbar></Investornavbar> 
-      <div className="container">
-        <h2 className="title">Transaction Analytics</h2>
-        <div className="chartContainer">
+      <Investornavbar />
+      <div className="analytics-container">
+        <h2 className="analytics-title">Transaction Analytics</h2>
+        <div className="analytics-chart-wrapper">
           <Bar data={chartData} options={chartOptions} />
         </div>
       </div>

@@ -163,6 +163,14 @@ router.post(
       if (totalInvested === loan.amount) {
         loan.status = "pending";
       }
+        const document =await Document.findOne({owner: req.user.userId })
+            if (!document) {
+              return res.status(400).json({ message: "upload document for verification" });
+            }
+            if (document.isVerified === false) {
+              return res.status(400).json({ message: "Verification document not found" });
+            }
+            
 
       await loan.save();
       res.json({

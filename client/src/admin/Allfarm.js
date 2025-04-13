@@ -16,6 +16,7 @@ const Allfarms = () => {
     try {
       const response = await API.get("/admin/farms");
       setFarms(response.data);
+      console.log(response)
     } catch (error) {
       console.error("Error fetching farms:", error);
     } finally {
@@ -37,15 +38,16 @@ const Allfarms = () => {
               <b>Loading farms...</b>
             </p>
           ) : farms.length > 0 ? (
-            <div className="div00">
+            <div className="div00" style={{marginTop:"0px"}}>
               {farms.map((farm) => (
                 <div key={farm._id} className="all-farms2">
                 
                 
                   <h2>{farm.name}</h2>
                   <p>
-                    <b>Farmer:</b> {farm.farmer.firstName}{" "}
+                    <b>Farmer:</b>{farm.farmer.firstName},
                     {farm.farmer.lastName}
+                    
                   </p>
                   <p>
                     <b>Location:</b> {farm.location}

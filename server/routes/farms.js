@@ -44,42 +44,6 @@ router.get("/my-farms", auth, async (req, res) => {
   }
 });
 
-// router.post(
-//   "/",
-//   [auth, checkRole(["farmer"]), upload.array("images", 5)],
-//   async (req, res) => {
-//     try {
-//       const {
-//         name,
-//         description,
-//         location,
-//         farmType,
-//         size,
-//         productionCapacity,
-//       } = req.body;
-
-//       const images = req.files.map((file) => file.path);
-
-//       const farm = new Farm({
-//         farmer: req.user.userId,
-//         name,
-//         description,
-//         location,
-//         farmType,
-//         size,
-//         productionCapacity,
-//         images,
-//       }).populate("document")
-
-//       await farm.save();
-//       res.json(farm);
-//     } catch (err) {
-//       console.error(err);
-//       res.status(500).json({ message: "Server error" });
-//     }
-//   }
-// );
-
 router.post(
   "/",
   [auth, checkRole(["farmer"]), upload.array("images", 5)],

@@ -25,7 +25,6 @@ function Verify() {
         fetchLoans();
     }, []);
 
-    
     const handleVerify = async (id) => {
         setActionLoading(id);
         try {
@@ -45,8 +44,6 @@ function Verify() {
         }
     };
 
-   
-
     const handleDelete = async (id) => {
         const confirmDelete = window.confirm("Are you sure you want to delete this loan?");
         if (!confirmDelete) return;
@@ -55,7 +52,6 @@ function Verify() {
         try {
             const response = await API.delete(`/admin/loans/${id}/delete`);
             if (response.status === 200) {
-               
                 setLoans(loans.filter((loan) => loan._id !== id));
                 toast.success("Loan deleted successfully!");
             } else {
@@ -67,7 +63,7 @@ function Verify() {
             setActionLoading(null);
         }
     };
-    
+
     return (
         <div>
             <Navbaradmin />
@@ -76,7 +72,7 @@ function Verify() {
                     <p className="verify-loading"><b>Loading loans...</b></p>
                 ) : (
                     <div className="verify-card-container">
-                        {loans.length >= 1 ? (
+                        {loans.length > 0 ? (
                             loans.map((loan) => (
                                 <div key={loan._id} className="verify-card">
                                     <h2><b>Status:</b> {loan?.status || "Unknown"}</h2>
@@ -102,7 +98,7 @@ function Verify() {
                                         <button 
                                             className="verify-action-button verify-delete"
                                             onClick={() => handleDelete(loan._id)}
-                                            disabled={actionLoading === loan._id}
+                                            disabled={loan.isVerified || actionLoading === loan._id}
                                         >
                                             {actionLoading === loan._id ? "Deleting..." : "Delete"}
                                         </button>

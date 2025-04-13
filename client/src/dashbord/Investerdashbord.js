@@ -2,7 +2,7 @@
 import Investornavbar from './Investornavbar';
 //import { toast } from 'react-toastify';
 //import API from '../API';
-import '../investor/Available.css'
+
 
 function Investerdashbord() {
   // const [loans, setLoans] = useState([]);

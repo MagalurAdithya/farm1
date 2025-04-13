@@ -1,0 +1,143 @@
+  .profile-container {
+    background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f0f0;
+  }
+  
+  .profile-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #00ffc6;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-info {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .profile-picture {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+   
+  }
+  
+  .user-detail {
+    flex-direction: column;
+  }
+
+  .user-detail.bold {
+    
+    display: inline;
+  }
+  
+  .bold {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 0.2rem;
+    display: inline;
+  }
+  
+  .user-detail p {
+    font-size: 1.2rem;
+    color: #eee;
+    margin: 0;
+    display: inline;
+    padding-left: 30px;
+  }
+  
+  #text {
+    color: #bbb;
+  }
+  
+  .verified {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  .not-verified {
+    color: #ff4c4c;
+    font-weight: bold;
+  }
+  
+  .ul {
+    margin-top: 1rem;
+  }
+  
+  .ul li {
+    font-size: 1.05rem;
+    color: #ddd;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+    text-align: center;
+    margin-top: 0%;
+    list-style: none;
+  }
+  
+  .ul li::before {
+  
+    position: absolute;
+    left: 0;
+    color: #00ffc6;
+  }
+  
+  .nodocuments {
+    font-style: italic;
+    color: #aaa;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.7rem 1.6rem;
+    background-color: #00ffc6;
+    color: #000;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 255, 198, 0.4);
+  }
+  
+  .nav-item:hover {
+    background-color: #00cc99;
+    transform: scale(1.05);
+  }
+  

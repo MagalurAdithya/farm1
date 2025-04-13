@@ -1,32 +1,36 @@
-/* Main Wrapper */
-.div29 {
+/* .div29 {
     background-color: #f4f7fb;
     min-height: 100vh;
     padding: 20px;
+    background-image: url(../../public/images/my.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: auto;
   }
-  
-  /* Loading Message */
+
   .para22 {
     text-align: center;
     font-size: 1.5rem;
     color: #555;
   }
   
-  /* Investment List Container */
+  
   .div59 {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  /* No Investments Found Message */
+  
   .para7 {
     text-align: center;
     font-size: 1.2rem;
     color: #888;
   }
   
-  /* Investment Cards */
+
   .div96 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,7 +39,6 @@
     margin-top: 30px;
   }
   
-  /* Individual Investment Card */
   .div89 {
     background-color: #ffffff;
     padding: 20px;
@@ -45,31 +48,100 @@
     text-align: left;
   }
   
-  /* Heading for Investment */
+
   .head8 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
   }
   
-  /* Investment Details */
+ 
   .para9 {
     font-size: 1rem;
     color: #777;
     margin-bottom: 10px;
   }
   
-  /* Investment Data */
-  p {
+ 
+  .div88 p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 5px;
   }
+   */
+
+.div29 {
+  background-color: #f4f7fb;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-image: url(../../public/images/my.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
   
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    .div96 {
-      grid-template-columns: 1fr; /* Stacks the cards on smaller screens */
-    }
+  .para22 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #444;
+    margin-top: 40px;
+  }
+  
+  .div59 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .para7 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #999;
+    margin-top: 30px;
+  }
+  
+  .div96 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .div89 {
+    background-color: #ffffffee;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .div89:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+  
+  .div89 p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+  .head8 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .para9 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 12px;
   }
   

@@ -6,7 +6,7 @@ import Farmerdashbord from './dashbord/Farmerdashbord';
 import Investerdashbord from './dashbord/Investerdashbord';
 import Admindashbord from './dashbord/Admindashbord';
 import { ToastContainer } from 'react-toastify';
-import Myfarms from './farmer/Myfarms';
+// import Myfarms from './farmer/Myfarms';
 import Addfarms from './farmer/Addfarms';
 import Loans from './farmer/Loans';
 import Avaliable from './investor/Avaliable';
@@ -32,6 +32,7 @@ import Documentverify from './admin/Documentverify';
 import UserProfile from './investor/Profileinvestor';
 import Credit from './admin/Credit';
 import Analytics from './investor/Analytics';
+import UserTransactions from './farmer/Transactions';
 
 
 
@@ -44,9 +45,10 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/farmerdashbord" element={<Farmerdashbord></Farmerdashbord>}></Route>
-          <Route path='/myfarm' element={<Myfarms></Myfarms>}></Route>
+          {/* <Route path='/myfarm' element={<Myfarms></Myfarms>}></Route> */}
           <Route path='/addfarms' element={<Addfarms></Addfarms>}></Route>
           <Route path='/document' element={<DocumentUpload></DocumentUpload>}></Route>
+          <Route path='/transactions' element={<UserTransactions></UserTransactions>}></Route>
           {/* <Route path='/loans' element={<Loans></Loans>}></Route> */}
           <Route path="/loans/:farmId" element={<Loans/>} />
           <Route path='mydocuments' element={<MyDocuments></MyDocuments>}></Route>

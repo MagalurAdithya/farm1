@@ -29,9 +29,10 @@ function Issue() {
       <div>
         <Navbar></Navbar>
       </div>
-      <form onSubmit={save} className='form'>
+     <div className='back'>
+     <form onSubmit={save} className='form'>
       <div className='div6'>
-        <label>IssueTitle</label>
+        <label style={{color:"white"}}>IssueTitle</label>
         <input
         type='text'
         placeholder='Title of the issue'
@@ -40,7 +41,7 @@ function Issue() {
         ></input>
       </div>
       <div className='div6'>
-        <label>issueDiscription</label>
+        <label style={{color:"white"}}>IssueDiscription</label>
         <input
         type='text'
         placeholder='Describe the issue'
@@ -53,6 +54,7 @@ function Issue() {
         <button>Send</button>
       </div>
       </form>
+     </div>
     </div>
   )
 }

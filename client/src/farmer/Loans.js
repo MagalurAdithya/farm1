@@ -40,10 +40,13 @@ const Loans = () => {
   };
 
   return (
-    <>
-      <Navbar />
-      <div style={{ marginTop: "50px" }} className="loan-request-form-container">
-        <h2>Request a Loan for Farm ID <b style={{color:"white"}}>{farmId}</b></h2>
+   <div>
+    <div>
+      <Navbar></Navbar>
+    </div>
+    <div className="body1">
+    <div style={{ marginTop: "90px" }} className="loan-request-form-container">
+        <h2>Request a Loan for Farm ID <b style={{color:"#ffffff00"}}>{farmId}</b></h2>
         <form onSubmit={handleSubmit}>
         <input
             type="text"
@@ -80,7 +83,8 @@ const Loans = () => {
           <button type="submit">Request Loan</button>
         </form>
       </div>
-    </>
+    </div>
+   </div>
   );
 };
 

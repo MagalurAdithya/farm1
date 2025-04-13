@@ -27,7 +27,7 @@ const InvestmentList = () => {
   return (
     <>
       <Investornavbar />
-      <div className="div29">
+      <div className="div29" style={{marginTop:"60px"}}>
         <div className="div59">
           {loading ? (
             <p className="para22"><b>Loading your Investments...</b></p>

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import API from '../API';
 import Navbaradmin from '../dashbord/Navbaradmin.js'
 import { toast } from 'react-toastify';
-// import './GetDocuments.css';
+import './Documentverify.css';
+
 
 const Documentverify = () => {
   const [documents, setDocuments] = useState([]);
@@ -17,7 +18,7 @@ const Documentverify = () => {
           },
         });
         setDocuments(response.data);
-        toast.success('Documents fetched successfully!');
+        
       } catch (err) {
         setError('Failed to fetch documents');
         console.error(err);
@@ -58,14 +59,14 @@ const Documentverify = () => {
             <Navbaradmin></Navbaradmin>
         </div>
         <div>
-        <div className="document-container">
+        <div className="document-containers">
      
      <h2>Documents List</h2>
      {error && <p>{error}</p>}
      {documents.length === 0 ? (
        <p className="no-documents">No documents available.</p>
      ) : (
-       <table className="document-table">
+       <table className="document-tables">
          <thead>
            <tr>
              <th>Title</th>
@@ -87,20 +88,20 @@ const Documentverify = () => {
                    href={`http://localhost:3433/${doc.filePath}`}
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="view-button"
+                   className="view-buttons"
                  >
                    View
                  </a>
                  <a
                    href={`http://localhost:3433/${doc.filePath}`}
                    download
-                   className="download-button"
+                   className="download-buttons"
                  >
                    Download
                  </a>
                  {!doc.isVerified && (
                    <button
-                     className="verify-button"
+                     className="verify-buttons"
                      onClick={() => handleVerify(doc._id)}
                    >
                      Verify

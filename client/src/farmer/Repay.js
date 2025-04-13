@@ -2,18 +2,24 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../dashbord/Navbar";
 import API from "../API";
 import { toast } from "react-toastify";
+import { useWindowSize } from 'react-use'
+import Confetti from 'react-confetti'
 import './Repay.css'
 
 const MyLoans = () => {
   const [loans, setLoans] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedLoan, setSelectedLoan] = useState(null);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const { width, height } = useWindowSize();
+
 
   const fetchLoans = async () => {
     setLoading(true);
     try {
       const response = await API.get("/loans/my-loans");
       setLoans(response.data);
+      console.log(response.data)
     } catch (error) {
       toast.error("Failed to load loans");
     } finally {
@@ -35,6 +41,12 @@ const MyLoans = () => {
         if (response.data?.message) {
           toast.success(response.data.message);
           fetchLoans();
+          setShowConfetti(true); 
+        
+          
+          setTimeout(() => {
+            setShowConfetti(false);
+          }, 4000);
         } else {
           toast.error("Unexpected response format.");
         }
@@ -51,6 +63,7 @@ const MyLoans = () => {
   return (
     <>
       <Navbar UserType={"farmer"} />
+      {showConfetti && <Confetti width={width} height={height} />}
       <div className="loans-container">
         <h1 className="loans-title">Repay Loan</h1>
 
@@ -61,14 +74,17 @@ const MyLoans = () => {
             <table className="loans-table">
               <thead>
                 <tr>
+                  <th>Investor</th>
                   <th>Loan Amount</th>
                   <th>Status</th>
                   <th>Actions</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="body11">
                 {loans.map((loan) => (
                   <tr key={loan._id}>
+                    <td>{loan.investors.length > 0 ? loan.investors[0].investor.firstName : "N/A"}</td>
+
                     <td>Rs {loan.amount.toLocaleString()}</td>
                     <td>
                       <span className={`status ${loan.status.toLowerCase()}`}>

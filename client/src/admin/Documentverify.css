@@ -1,0 +1,91 @@
+.document-containers {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .document-containers h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+
+  .document-tables {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .document-tables th,
+  .document-tables td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .document-tables th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .document-tables tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .document-tables tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+
+  .no-documents,
+  .error-message {
+    text-align: center;
+    color: red;
+    margin-top: 20px;
+  }
+  
+
+  .view-buttons,
+  .download-buttons,
+  .verify-buttons {
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .view-buttons {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .download-buttons {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .verify-buttons {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .view-buttons:hover {
+    background-color: #138496;
+  }
+  
+  .download-buttons:hover {
+    background-color: #e0a800;
+  }
+  
+  .verify-buttons:hover {
+    background-color: #218838;
+  }
+  

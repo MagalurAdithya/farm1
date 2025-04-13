@@ -6,6 +6,7 @@ import Farm from '../models/Farm.js';
 import Loan from '../models/Loan.js';
 import Document from '../models/Document.js';
 import Transaction from '../models/Transaction.js';
+import { sendEmail } from '../utils/email.js';
 
 router.get('/users', [auth, checkRole(['admin'])], async (req, res) => {
   try {
@@ -24,7 +25,16 @@ router.put('/users/:id/verify', [auth, checkRole(['admin'])], async (req, res) =
       { isVerified: true },
       { new: true }
     ).select('-password');
-    
+    const { email, firstName } = user;
+    await sendEmail(
+      email,
+      "Farm IT - Registration Successful",
+      `<p><strong>Dear ${firstName},</strong></p>
+      <p>Your account has been successfully verified.</p>
+      <p><strong>Login for the better experience with ${email}</strong></p>
+      <p>Thank you for your patience.</p>
+      <p><strong>Best Regards,</strong><br>Farm IT Team</p>`
+    );
     res.json(user);
   } catch (err) {
     console.error(err);

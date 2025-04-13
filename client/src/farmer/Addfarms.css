@@ -1,11 +1,15 @@
-
-.div33 {
+/* .div33 {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f5f5f5;
     padding-top: 80px; 
+    background-image: url(../../public/images/wall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   
@@ -67,5 +71,99 @@
   
   .form4 button:hover {
     background-color: #218838;
+  }
+   */
+
+   .div33 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 60px;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    background-image: url(../../public/images/wall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 900px;
+  }
+  
+  .div22 {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 480px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    /* top: 10px; */
+  }
+  
+  .div22:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  .form4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .form4 h2 {
+    font-size: 30px;
+    font-weight: 600;
+  
+    color: #2f3542;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form4 input,
+  .form4 textarea {
+    padding: 14px 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #f1f2f6;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form4 input:focus,
+  .form4 textarea:focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 2px #70c1b3;
+  }
+  
+  .form4 textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+  
+  .form4 input[type="file"] {
+    padding: 6px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .form4 button {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    border: none;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .form4 button:hover {
+    transform: scale(1.02);
+    opacity: 0.95;
   }
   

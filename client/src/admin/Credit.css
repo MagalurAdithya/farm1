@@ -1,0 +1,78 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.loan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.loan-item {
+  background-color: #f9f9f9;
+  border-left: 6px solid #2c3e50;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.loan-item.verified {
+  border-left-color: #27ae60;
+  background-color: #eafaf1;
+}
+
+.loan-item.credited {
+  border-left-color: #3498db;
+  background-color: #eef6fc;
+}
+
+.loan-item p {
+  margin: 8px 0;
+}
+
+/* Styling for Verify Investment button */
+.buttons22 {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons22:hover:not(:disabled) {
+  background-color: #1e8c4e;
+  transform: scale(1.02);
+}
+
+/* Styling for Credit Investment button */
+.credit {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.credit:hover:not(:disabled) {
+  background-color: #217dbb;
+  transform: scale(1.02);
+}
+
+
+.buttons22:disabled,
+.credit:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}

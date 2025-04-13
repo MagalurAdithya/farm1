@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import API from "../API";
 import Navbar from "../dashbord/Navbar";
+import './UserProfile.css'
 
 const UserProfile = () => {
   const [user, setUser] = useState(null);
@@ -46,7 +47,7 @@ const UserProfile = () => {
       <div>
       <div className="profile-container" >
      
-     <h1 style={{ color: "black" }}>User Profile</h1>
+     <h1>User Profile</h1>
      <div className="profile-info">
        {user.profilePic && (
          <div className="profile-picture">
@@ -58,18 +59,17 @@ const UserProfile = () => {
          </div>
        )}
        <div className="user-details">
-       
          <div className="user-detail">
            <b className="bold">First Name:</b>
-           <p style={{ fontSize: "1.30rem", color: "black" }}>{user.firstName}</p>
+           <p>{user.firstName}</p>
          </div>
          <div className="user-detail">
            <b className="bold">Last Name:</b>
-           <p style={{ fontSize: "1.30rem", color: "black" }}>{user.lastName}</p>
+           <p >{user.lastName}</p>
          </div>
          <div className="user-detail">
            <b className="bold">Email:</b>
-           <p style={{ fontSize: "1.30rem", color: "black" }}>{user.email}</p>
+           <p >{user.email}</p>
          </div>
          <div className="user-detail">
            <b className="bold">Role:</b>
@@ -77,20 +77,20 @@ const UserProfile = () => {
          </div>
          <div className="user-detail">
            <b className="bold">Status:</b>
-           <p style={{ fontSize: "1.25rem" }} className={user.isVerified ? 'verified' : 'not-verified'}>
+           <p  className={user.isVerified ? 'verified' : 'not-verified'}>
              {user.isVerified ? "Verified" : "Not Verified"}
            </p>
          </div>
 
-         <h3 style={{ color: "black" }}>My Documents Status</h3>
+         <h3 style={{color:"#00cc99"}}>My Documents Status</h3>
          <div>
            {documents.length === 0 ? (
              <p className="nodocuments">No documents uploaded yet.</p>
            ) : (
-             <ul>
+             <ul className="ul">
                {documents.map((doc) => (
                  <li key={doc._id}>
-                   <b className="bold" style={{ fontWeight: 'bold' }}>{doc.title} :</b> -{" "}
+                   <b className="bold" >{doc.title} :</b> -{" "}
                    <span style={{ color: doc.isVerified ? "green" : "red" }}>
                      {doc.isVerified ? "Verified" : "Not Verified"}
                    </span>
@@ -101,17 +101,10 @@ const UserProfile = () => {
          </div>
 
          <NavLink
-           to="/mydocuments"
+           to="/document"
            className="nav-item"
           
-           onMouseEnter={(e) => {
-             e.target.style.backgroundColor = "black";
-             e.target.style.color = "white";
-           }}
-           onMouseLeave={(e) => {
-             e.target.style.backgroundColor = "black";
-             e.target.style.color = "white";
-           }}
+        
          >
            Upload Documents
          </NavLink>

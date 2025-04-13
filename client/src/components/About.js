@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Home from './Home';
 import './About.css'
@@ -6,6 +5,8 @@ function AboutUs() {
   return (
     <div>
       <div><Home></Home></div>
+    <div>
+      <header>
       <div>
       <div className="about-section1">
       <h2 className="about-heading">Bridging Agriculture & Innovation</h2>
@@ -53,11 +54,11 @@ function AboutUs() {
         <div className="about-card">
           <h3>Why Partner With Us?</h3>
           <ul>
-            <li>✔ Advanced Technology for Smarter Farming</li>
-            <li>✔ Trusted Platform for Secure Transactions</li>
-            <li>✔ Empowerment of Local Farmers</li>
-            <li>✔ Sustainable and Eco-friendly Agricultural Growth</li>
-            <li>✔ A Win-Win Model for All Participants</li>
+            <li>Advanced Technology for Smarter Farming</li>
+            <li>Trusted Platform for Secure Transactions</li>
+            <li>Empowerment of Local Farmers</li>
+            <li>Sustainable and Eco-friendly Agricultural Growth</li>
+            <li>A Win-Win Model for All Participants</li>
           </ul>
         </div>
 
@@ -72,6 +73,21 @@ function AboutUs() {
       </div>
     </div>
       </div>
+      </header>
+      <footer className='footer'>
+       <h3>Contact Us</h3>
+           <p>Email: support@agroinnovate.com</p>
+           <p>Phone: +91 98765 43210</p>
+           <p>Address: 123 AgriTech Lane, Greenfield, Karnataka, India</p>
+           <p>Follow us on:
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"> LinkedIn</a> | 
+            <a href="https://www.twitter.com" target="_blank" rel="noreferrer"> Twitter</a> | 
+            <a href="https://www.instagram.com" target="_blank" rel="noreferrer"> Instagram</a>
+           </p>
+       </footer>
+
+    </div>
+
     </div>
   );
 }

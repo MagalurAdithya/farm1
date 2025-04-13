@@ -1,3 +1,11 @@
+.head99 {
+  height: 600px; 
+  width: 1264.5px; 
+  background-image: url(../../public/images/romain-dancre-doplSDELX7E-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .upload-container {
     display: flex;
     flex-direction: column;
@@ -8,7 +16,7 @@
     padding: 20px;
   }
    .upload-card {
-    background: #fff;
+    background: #ffffff00;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -16,8 +24,10 @@
     max-width: 400px;
     text-align: center;
     position: relative;
-    top: 155px;
-    left: 500px;
+    top: 100px;
+    left: 450px;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter:blur(15px);
   }
   
 

@@ -30,8 +30,7 @@ function Transactions() {
   return (
     <div>
       <div>
-        <Navbaradmin>
-        </Navbaradmin>
+        <Navbaradmin></Navbaradmin>
       </div>
       <div>
       <div className="transactions-page">
@@ -61,7 +60,7 @@ function Transactions() {
                 const interestRate = loan ? loan.interestRate : 'N/A';
                 return (
                   <tr key={transaction._id}>
-                    <td>{transaction._id}</td> {/* Display the Transaction ID */}
+                    <td>{transaction._id}</td> 
                     <td>{loanAmount}</td>
                     <td>{interestRate}%</td>
                     <td>{transaction.from.firstName} {transaction.from.lastName}</td>

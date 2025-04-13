@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// Create a transporter using Gmail SMTP
+
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -12,14 +12,13 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Function to send an email
 export const sendEmail = async (to, subject, htmlContent) => {
   try {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to,
       subject,
-      html: htmlContent,  // Send as HTML
+      html: htmlContent,  
     };
 
     const info = await transporter.sendMail(mailOptions);

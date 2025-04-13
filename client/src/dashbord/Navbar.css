@@ -1,5 +1,9 @@
-
-.navbar {
+/* .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,8 +56,6 @@
   display: flex;
   gap: 15px;
 }
-
-
 .profile-btn {
   background: #27ae60;
   color: white;
@@ -72,7 +74,7 @@
 }
 
 .logout-btn {
-  background: #e74c3c;
+  background: #0e6131;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -83,6 +85,117 @@
 }
 
 .logout-btn:hover {
-  background: #c0392b;
+  background: #2ecc71;
+}
+ */
+
+ .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 40px; */
+  background: rgba(44, 62, 80, 0.8); 
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: white;
+  /* background-color: gray; */
 }
 
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  /* font-family: 'Segoe UI', sans-serif; */
+  color: #ffffff;
+  position: relative;
+  left: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #00ffcc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #00ffcc;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #00ffcc;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.profile-btn,
+.logout-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+    right: 20px;
+}
+
+.profile-btn {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.profile-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+}
+
+.logout-btn {
+  background: linear-gradient(to right, #ff4e50, #f9d423);
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #f9d423, #ff4e50);
+}

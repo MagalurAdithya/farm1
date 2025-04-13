@@ -6,10 +6,10 @@ function Home() {
   return (
     <div className='div111'>
       <nav className='div000'>
-        <div className="nav-brand">Farmit</div>
+        <div className="nav-brand">🚜Farmit</div>
         <ul>
           <li><Link to='/'>About Us</Link></li>
-          <li><Link to='/login'>Login</Link></li>
+          <li><Link to='/login'>SignUp</Link></li>
         </ul>
       </nav>
     </div>
